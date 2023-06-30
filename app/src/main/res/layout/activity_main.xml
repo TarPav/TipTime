@@ -14,7 +14,7 @@
         android:hint="@string/cost_of_service"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
-        android:textColorHint="#AC150A"
+        android:textColorHint="#DD2C00"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="Autofill" />
@@ -41,7 +41,9 @@
             android:id="@+id/twenty_percent_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="false"
             android:text="@string/amazing_service"
+            style="@style/Theme.AppCompat.Buttons"
             app:layout_constraintStart_toStartOf="@id/tip_options_button"
             app:layout_constraintTop_toBottomOf="@id/tip_options_button" />
 
@@ -50,6 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/good_service"
+            style="@style/Theme.AppCompat.Buttons"
             app:layout_constraintStart_toStartOf="@id/tip_options_button"
             app:layout_constraintTop_toBottomOf="@id/twenty_percent_button" />
 
@@ -58,37 +61,39 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ok_service"
+            style="@style/Theme.AppCompat.Buttons"
             app:layout_constraintStart_toStartOf="@id/tip_options_button"
             app:layout_constraintTop_toBottomOf="@id/eighteen_percent_button" />
     </RadioGroup>
 
-    <Switch
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/round_up_switch"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:checked="true"
         android:minHeight="48dp"
         android:text="@string/round_up_tip"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/tip_options_button"
         app:layout_constraintTop_toBottomOf="@id/tip_options_button"
+        style="@style/Theme.AppCompat.Switch"
         tools:ignore="UseSwitchCompatOrMaterialXml,VisualLintButtonSize" />
 
     <Button
         android:id="@+id/calculate_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/calculate"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/round_up_switch"
+        android:text="@string/calculate"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.ButtonCalculate"
         tools:ignore="VisualLintButtonSize" />
 
     <TextView
         android:id="@+id/tip_result_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         tools:text="Tip Amount: $10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/calculate_button" />

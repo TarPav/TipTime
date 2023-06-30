@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="amazing_service">Восхитительно 20%</string>
+    <string name="good_service">Хорошо 18%</string>
+    <string name="ok_service">Пойдет 15%</string>
+    <string name="how_was_the_service">Оцените сервис</string>
+    <string name="calculate">Рассчитать</string>
+    <string name="cost_of_service">Сумма в чеке</string>
+    <string name="round_up_tip">Округлить</string>
+</resources>
